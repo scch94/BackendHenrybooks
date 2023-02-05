@@ -9,5 +9,4 @@ public class HenrybooksApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HenrybooksApplication.class, args);
 	}
-
 }
