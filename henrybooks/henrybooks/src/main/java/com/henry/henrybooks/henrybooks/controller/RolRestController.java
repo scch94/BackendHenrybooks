@@ -1,6 +1,6 @@
 package com.henry.henrybooks.henrybooks.controller;
 
-import com.henry.henrybooks.henrybooks.entity.Rol;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -9,6 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/rol")
 public class RolRestController {
+    /*
     @GetMapping("/{id}")
     public Rol findById(@PathVariable long id){
         Rol rol =new Rol(id,"user",true);
@@ -46,5 +47,7 @@ public class RolRestController {
         String nombre="el usuari con id "+id+" fue eliminado";
         return nombre;
     }
+*/
+
 
 }
