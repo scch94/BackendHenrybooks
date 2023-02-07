@@ -14,6 +14,6 @@ public interface IUsuarioService {
 
     public Usuario updateUser(Long id,Usuario usuario);
 
-    public String updateUser(long id);
+    public String deleteUser(long id);
 
 }

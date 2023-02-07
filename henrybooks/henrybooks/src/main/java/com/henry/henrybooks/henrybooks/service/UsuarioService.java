@@ -33,7 +33,7 @@ public class UsuarioService implements IUsuarioService{
     }
 
     @Override
-    public String updateUser(long id) {
+    public String deleteUser(long id) {
         return null;
     }
 }
