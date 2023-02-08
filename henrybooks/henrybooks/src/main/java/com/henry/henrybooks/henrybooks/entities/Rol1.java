@@ -1,4 +1,4 @@
-package com.henry.henrybooks.henrybooks.entity;
+package com.henry.henrybooks.henrybooks.entities;
 
 public class Rol1 {
     //atributos

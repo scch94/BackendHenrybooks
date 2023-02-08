@@ -1,6 +1,6 @@
 package com.henry.henrybooks.henrybooks.service;
 
-import com.henry.henrybooks.henrybooks.entity.Resena;
+import com.henry.henrybooks.henrybooks.entities.Resena;
 
 import java.util.List;
 

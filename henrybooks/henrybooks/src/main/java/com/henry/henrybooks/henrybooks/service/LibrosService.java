@@ -1,6 +1,6 @@
 package com.henry.henrybooks.henrybooks.service;
 
-import com.henry.henrybooks.henrybooks.entity.Libros;
+import com.henry.henrybooks.henrybooks.entities.Libros;
 
 import java.util.List;
 

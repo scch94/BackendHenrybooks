@@ -1,24 +1,41 @@
-package com.henry.henrybooks.henrybooks.entity;
+package com.henry.henrybooks.henrybooks.entities;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name="Uauarios")
 public class Usuario {
     //atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_usuario",nullable = false)
     private Long idUsuario;
+    @Column(name = "nombre")
     private String nombre;
+    @Column(name = "email")
     private String email;
+    @Column(name = "clave")
     private String clave;
+    @Column(name = "rol")
     private Rol rol;
+    @Column(name = "estado")
     private boolean estado;
+    @ManyToMany(mappedBy = "usuarios")
+    private List<Libros> libros;
     //constructors
     public Usuario() {
     }
 
-    public Usuario(Long idUsuario, String nombre, String email, String clave, Rol rol, boolean estado) {
+    public Usuario(Long idUsuario, String nombre, String email, String clave, Rol rol) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.email = email;
         this.clave = clave;
         this.rol = rol;
-        this.estado = estado;
+        this.estado = true;
+        this.libros=new ArrayList<Libros>();
     }
     //metodos
 
@@ -64,12 +81,21 @@ public class Usuario {
         this.rol = rol;
     }
 
-    public boolean getEstado() {
-        return estado;
-    }
 
     public void setEstado(boolean estado) {
         this.estado = estado;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public List<Libros> getLibros() {
+        return libros;
+    }
+
+    public void setLibros(List<Libros> libros) {
+        this.libros = libros;
     }
 
     @Override
@@ -81,6 +107,7 @@ public class Usuario {
                 ", clave='" + clave + '\'' +
                 ", rol=" + rol +
                 ", estado=" + estado +
+                ", libros=" + libros +
                 '}';
     }
 }

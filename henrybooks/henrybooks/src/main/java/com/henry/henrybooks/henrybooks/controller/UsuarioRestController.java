@@ -1,6 +1,6 @@
 package com.henry.henrybooks.henrybooks.controller;
 
-import com.henry.henrybooks.henrybooks.entity.Usuario;
+import com.henry.henrybooks.henrybooks.entities.Usuario;
 import com.henry.henrybooks.henrybooks.service.IUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

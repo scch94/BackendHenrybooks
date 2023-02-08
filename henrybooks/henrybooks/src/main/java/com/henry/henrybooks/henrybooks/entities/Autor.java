@@ -1,10 +1,22 @@
-package com.henry.henrybooks.henrybooks.entity;
+package com.henry.henrybooks.henrybooks.entities;
 
+
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Autores")
 public class Autor {
     //atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_autor",nullable = false)//nullable=true acepta valores unicos
     private Long idAutor;
+    @Column(name = "nombre",nullable = false,unique = true)
     private String nombre;
+    @Column(name = "estado")
     private boolean estado;
+
     //constructor
     public Autor(Long idAutor, String nombre) {
         this.idAutor = idAutor;
